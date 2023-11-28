@@ -2,7 +2,7 @@ param(
   [Parameter(Mandatory)]  
   [string]$new_api_key  
 )  
-$api_url = "https://wakapi.getperspect.xyz/api/v1"
+$api_url = "https://wakapi.getperspect.dev/api/v1"
 $URL = "https://perspect.xyz/setup-tva/success"
 $file_path = "$env:USERPROFILE\.wakatime\wakatime-internal.cfg"
 
