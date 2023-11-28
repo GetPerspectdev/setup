@@ -15,13 +15,23 @@ if (-not (Test-Path $file_path)) {
 if (Get-Content $file_path | Select-String "api_key =") {
     # Update the line with the new API key
     (Get-Content $file_path) | ForEach-Object {
-        $_ -replace "api_key = .*", "api_key = $new_api_key" `
-           -replace "api_url = .*", "api_url = $api_url"
+        $_ -replace "api_key = .*", "api_key = $new_api_key"
     } | Set-Content $file_path
     Write-Host "API key updated in $file_path"
 } else {
     # Add a new line with the API key
     Add-Content $file_path "api_key = $new_api_key"
+    Write-Host "API key added to $file_path"
+}
+
+if (Get-Content $file_path | Select-String "api_url =") {
+    # Update the line with the new API url
+    (Get-Content $file_path) | ForEach-Object {
+        $_ -replace "api_url = .*", "api_url = $api_url"
+    } | Set-Content $file_path
+    Write-Host "API key updated in $file_path"
+} else {
+    # Add a new line with the API url
     Add-Content $file_path "api_url = $api_url"
     Write-Host "API key added to $file_path"
 }

@@ -14,13 +14,22 @@ fi
 if grep -q "api_key =" "$file_path"; then
     # Update the line with the new API key
     sed -i -e "s,api_key = .*,api_key = $new_api_key," "$file_path"
-    sed -i -e "s,api_url = .*,api_url = $api_url," "$file_path"
     echo "API key updated in $file_path"
 else
     # Add a new line with the API key
     echo "api_key = $new_api_key" >> "$file_path"
-    echo "api_url = $api_url" >> "$file_path"
     echo "API key added to $file_path"
+fi
+
+# Check if any line contains "api_url ="
+if grep -q "api_url =" "$file_path"; then
+    # Update the line with the new API key
+    sed -i -e "s,api_url = .*,api_url = $api_url," "$file_path"
+    echo "API url updated in $file_path"
+else
+    # Add a new line with the API key
+    echo "api_url = $api_url" >> "$file_path"
+    echo "API url added to $file_path"
 fi
 
 
