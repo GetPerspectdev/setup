@@ -1,7 +1,7 @@
 #!/bin/bash
 
 api_url="https://wakapi.getperspect.xyz/api/v1"
-URL="https://perspect.xyz/plugins"
+URL="https://perspect.xyz/setup/success"
 file_path="$HOME/.wakatime.cfg"
 new_api_key=$1
 

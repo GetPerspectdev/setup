@@ -3,7 +3,7 @@ param(
   [string]$new_api_key  
 )  
 $api_url = "https://wakapi.getperspect.dev/api/v1"
-$URL = "https://perspect.dev/plugins"
+$URL = "https://perspect.dev/setup/success"
 $file_path = "$env:USERPROFILE\.wakatime\wakatime-internal.cfg"
 
 if (-not (Test-Path $file_path)) {
