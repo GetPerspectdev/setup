@@ -1,7 +1,7 @@
 #!/bin/bash
 
 api_url="https://wakapi.dev.getperspect.dev/api/v1"
-URL="https://perspect.dev/setup-tva/success"
+URL="https://getperspect.dev/setup-tva/success"
 file_path="$HOME/.wakatime.cfg"
 new_api_key=$1
 
