@@ -7,6 +7,7 @@ new_api_key=$1
 
 if [ ! -e "$file_path" ]; then
     touch "$file_path"
+    echo "[settings]" >> "$file_path"
     echo "File created: $file_path"
 fi
 

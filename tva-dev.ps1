@@ -8,6 +8,7 @@ $file_path = "$env:USERPROFILE\.wakatime\wakatime-internal.cfg"
 
 if (-not (Test-Path $file_path)) {
     New-Item -ItemType File -Path $file_path | Out-Null
+    Add-Content $file_path "[settings]"
     Write-Host "File created: $file_path"
 }
 
