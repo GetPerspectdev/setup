@@ -37,4 +37,4 @@ if (Get-Content $file_path | Select-String "api_url =") {
     Write-Host "API key added to $file_path"
 }
 
-Start-Process "explorer" -ArgumentList $URL
+Write-Host "Perspect is all setup! 🎉"

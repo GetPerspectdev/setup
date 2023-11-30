@@ -1,7 +1,6 @@
 #!/bin/bash
 
 api_url="http://localhost:8080/api/v1"
-URL="http://localhost:5173/setup-tva/success"
 file_path="$HOME/.wakatime.cfg"
 new_api_key=$1
 
@@ -33,18 +32,4 @@ else
     echo "API url added to $file_path"
 fi
 
-
-
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-        xdg-open $URL
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-        open $URL
-elif [[ "$OSTYPE" == "cygwin" ]]; then
-        explorer $URL
-elif [[ "$OSTYPE" == "msys" ]]; then
-        explorer $URL
-elif [[ "$OSTYPE" == "freebsd"* ]]; then
-        xdg-open $URL
-else
-        echo "please visit $URL to download plugins."
-fi
+echo "Perspect is all setup! 🎉"

@@ -3,7 +3,6 @@ param(
   [string]$new_api_key  
 )  
 $api_url = "http://localhost:8080/api/v1"
-$URL = "http://localhost:5173/setup-tva/success"
 $file_path = "$env:USERPROFILE\.wakatime\wakatime-internal.cfg"
 
 if (-not (Test-Path $file_path)) {
@@ -37,4 +36,4 @@ if (Get-Content $file_path | Select-String "api_url =") {
     Write-Host "API key added to $file_path"
 }
 
-Start-Process "explorer" -ArgumentList $URL
+Write-Host "Perspect is all setup! 🎉"
