@@ -2,8 +2,8 @@ param(
   [Parameter(Mandatory)]  
   [string]$new_api_key  
 )  
+$baseURL = 'https://api.dev.getperspect.dev/profile-api/public/tva/setup/'
 $api_url = "https://wakapi.dev.getperspect.dev/api/v1"
-$URL = "https://getperspect.dev/setup-tva/success"
 $file_path = "$env:USERPROFILE\.wakatime\wakatime-internal.cfg"
 
 if (-not (Test-Path $file_path)) {
@@ -36,5 +36,8 @@ if (Get-Content $file_path | Select-String "api_url =") {
     Add-Content $file_path "api_url = $api_url"
     Write-Host "API key added to $file_path"
 }
+
+$url = $baseURL + $new_api_key
+Invoke-RestMethod -Uri $url -Method Post
 
 Write-Host "Perspect is all setup! 🎉"

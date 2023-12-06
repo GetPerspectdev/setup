@@ -1,7 +1,7 @@
 #!/bin/bash
 
+setup_url="https://api.dev.getperspect.dev/profile-api/public/tva/setup/"
 api_url="https://wakapi.dev.getperspect.dev/api/v1"
-URL="https://getperspect.dev/setup-tva/success"
 file_path="$HOME/.wakatime.cfg"
 new_api_key=$1
 
@@ -32,5 +32,7 @@ else
     echo "api_url = $api_url" >> "$file_path"
     echo "API url added to $file_path"
 fi
+
+curl --request POST "$setup_url$new_api_key"
 
 echo "Perspect is all setup! 🎉"
