@@ -6,7 +6,14 @@ $baseURL = 'http://localhost:3001/profile-api/public/tva/setup/'
 $api_url = "http://localhost:8080/api/v1"
 $file_path = "$env:USERPROFILE\.wakatime\wakatime-internal.cfg"
 
-if (-not (Test-Path $file_path)) {
+if (-not (Test-Path -Path $file_path)) {
+    $dirPath = Split-Path -Path $filePath -Parent
+
+    # Check if the directory exists, and if not, create it
+    if (-not (Test-Path -Path $dirPath)) {
+        New-Item -ItemType Directory -Path $dirPath
+    }
+
     New-Item -ItemType File -Path $file_path | Out-Null
     Add-Content $file_path "[settings]"
     Write-Host "File created: $file_path"
