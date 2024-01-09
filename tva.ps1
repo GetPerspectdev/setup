@@ -7,7 +7,7 @@ $api_url = "https://wakapi.getperspect.dev/api/v1"
 $file_path = "$env:USERPROFILE\.wakatime\wakatime-internal.cfg"
 
 if (-not (Test-Path -Path $file_path)) {
-    $dirPath = Split-Path -Path $filePath -Parent
+    $dirPath = Split-Path -Path $file_path -Parent
 
     # Check if the directory exists, and if not, create it
     if (-not (Test-Path -Path $dirPath)) {
