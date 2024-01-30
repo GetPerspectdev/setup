@@ -4,7 +4,7 @@ param(
 )  
 $baseURL = 'http://localhost:3001/profile-api/public/tva/setup/'
 $api_url = "http://localhost:8080/api/v1"
-$file_path = "$env:USERPROFILE\.wakatime\wakatime-internal.cfg"
+$file_path = "$env:USERPROFILE\.wakatime.cfg"
 
 if (-not (Test-Path -Path $file_path)) {
     $dirPath = Split-Path -Path $file_path -Parent
