@@ -35,4 +35,4 @@ fi
 
 curl --request POST "$setup_url$new_api_key"
 
-echo "Perspect is all setup! 🎉"
+echo -e "\nYou've completed the first step of setting up Perspect!🎉\nNext, go to https://app.perspect.xyz/sources and follow the instructions to set up the sources that you work with the most"
