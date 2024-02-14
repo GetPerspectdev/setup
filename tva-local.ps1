@@ -47,4 +47,4 @@ if (Get-Content $file_path | Select-String "api_url =") {
 $url = $baseURL + $new_api_key
 Invoke-RestMethod -Uri $url -Method Post
 
-Write-Host "`nYou've completed the first step of setting up Perspect!🎉`nNext, go to http://localhost:5173/sources and follow the instructions to set up the sources that you work with the most"
+Write-Host "`nYou've completed the first step of setting up Perspect!`nNext, go to http://localhost:5173/sources and follow the instructions to set up the sources that you work with the most"
