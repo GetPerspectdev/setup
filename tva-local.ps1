@@ -3,7 +3,7 @@ param(
   [string]$new_api_key  
 )  
 $baseURL = 'http://localhost:3001/profile-api/public/tva/setup/'
-$api_url = "http://localhost:8080/api/v1"
+$api_url = "http://localhost:3001/api/v1"
 $file_path = "$env:USERPROFILE\.wakatime.cfg"
 
 if (-not (Test-Path -Path $file_path)) {
