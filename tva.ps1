@@ -1,3 +1,22 @@
+##########################################################################################################################
+# @@@@@@@@@@@@@@@@@  @@@@@@@@@@@@ @@@@@@@@@@@@     @@@@@@@@@@   @@@@@@@@@@@@   @@@@@@@@@@@@   @@@@@@@@@@@  @@@@@@@@@@@@@ #
+# @@@@@@@@@@@@@@@@@  @@@          @@@@     @@@@@ @@@@@    @@@@@ @@@@     @@@@  @@@@         @@@@@     @@@@@     @@@@     #
+#              @@@@  @@@          @@@@      @@@@ @@@@      @@@  @@@@     @@@@  @@@@         @@@@@     @@@@@     @@@@     #
+#   @@@@@      @@@@  @@@@@@@@@@@  @@@@@    @@@@@ @@@@@@@@@@@@   @@@@     @@@@  @@@@@@@@@@@@ @@@@@               @@@@     #
+#   @@@@@@@@@@@@@@@  @@@@@@@@@@@  @@@@@@@@@@@@@    @@@@@@@@@@@@ @@@@@@@@@@@@@  @@@@@@@@@@@@ @@@@@               @@@@     #
+#   @@@@@@@@@@@@@    @@@          @@@@     @@@@@  @@@      @@@@ @@@@           @@@@         @@@@@     @@@@@     @@@@     #
+#   @@@@@            @@@          @@@@      @@@@ @@@@@   @@@@@@ @@@@           @@@@         @@@@@@    @@@@@     @@@@     #
+#   @@@@@            @@@@@@@@@@@@ @@@@      @@@@   @@@@@@@@@@   @@@@           @@@@@@@@@@@@   @@@@@@@@@@@       @@@@     #
+##########################################################################################################################
+
+# This script is used to set up the Perspect API key and API URL in the WakaTime config file ~/.wakatime.cfg
+#   WakaTime is an open source time tracking tool that integrates with your code editor to 
+#   help you understand how you spend your time. Perspect makes use of Wakatime to track 
+#   your time and provide insights into your work habits. This file is used to set up the
+#   Perspect API key and API URL in the WakaTime config file. It also makes a POST request
+#   to the Perspect API to indicate in the Perspect UI that setup has been done correctly.
+
+# To learn more about Wakatime, visit https://wakatime.com/ and https://github.com/wakatime
 param(  
   [Parameter(Mandatory)]  
   [string]$new_api_key  
